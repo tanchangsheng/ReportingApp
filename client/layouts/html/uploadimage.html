@@ -1,0 +1,28 @@
+<template name="uploadimage">
+
+  <br>
+  <div align ="center">
+    <table class="table">
+      <td>Upload photo: </td>
+      <td>
+        {{#with currentUpload}}
+        Uploading <b>{{file.name}}</b>:
+        <span id="progress">{{progress.get}}%</span>
+        {{else}}
+        <input id="fileInput" type="file" />
+        {{/with}}
+      </td>
+    </table>
+  </div>
+  <br>
+
+  <!-- {{file}} -->
+</template>
+
+
+<template name='file'>
+  <img src="{{imageFile.link}}" alt="{{imageFile.name}}" />
+  <!-- Same as: -->
+  <!-- <img src="{{fileURL imageFile}}" alt="{{imageFile.name}}" /> -->
+  <hr>
+</template>
